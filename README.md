@@ -1,0 +1,1 @@
+# vite-plugin-multi-page-app
