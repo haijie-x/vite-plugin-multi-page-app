@@ -14,8 +14,5 @@
     "tsup": "^7.1.0",
     "typescript": "^5.0.4",
     "vite": "^4.4.3"
-  },
-  "dependencies": {
-    "vite-plugin-multi-page-app": "workspace:^0.0.0"
   }
 }

@@ -17,6 +17,6 @@
     "postcss": "^8.4.23",
     "tailwindcss": "^3.3.2",
     "tailwindcss-dark-mode-plugin": "^0.0.4",
-    "vite-plugin-inspect": "^0.7.32"
+    "vite-plugin-multi-page-app": "0.0.1"
   }
 }
