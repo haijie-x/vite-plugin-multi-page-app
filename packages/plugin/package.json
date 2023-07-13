@@ -1,0 +1,47 @@
+{
+  "name": "vite-plugin-multi-page-app",
+  "version": "0.0.0",
+  "description": "",
+  "author": "haijie-x",
+  "keywords": [
+    "vite",
+    "mpa",
+    "plugin"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "homepage": "https://github.com/haijie-x/vite-plugin-multi-page-app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haijie-x/vite-plugin-multi-page-app.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "dev": "pnpm run ts-watch",
+    "ts-watch": "tsup ./index.ts --format esm --watch",
+    "lint": "eslint . --fix",
+    "build": "tsup ./index.ts --format cjs,esm --dts --clean",
+    "prepublishOnly": "pnpm run lint && pnpm run build",
+    "release": "bumpp && npm publish"
+  },
+  "devDependencies": {
+    "@types/connect-history-api-fallback": "^1.5.0",
+    "bumpp": "^9.1.0",
+    "connect-history-api-fallback": "^2.0.0",
+    "deepmerge": "^4.3.1",
+    "globby": "^13.2.2"
+  }
+}
